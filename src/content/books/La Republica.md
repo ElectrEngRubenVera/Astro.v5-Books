@@ -1,7 +1,7 @@
 ---
 title: La Republica
 author: Platon
-img: La Republica.jpeg
+img: La Republica.jpg
 readtime: 1100
 description: Es un diálogo entre Sócrates y otros personajes que reflexiona sobre la justicia, la política, la sociedad, el arte, la virtud, el bien y el mal.
 buy:

@@ -1,7 +1,7 @@
 ---
 title: Habitos Atómicos
 author: James Clear
-img: Habitos Atómicos.jpeg
+img: Habitos Atómicos.jpg
 readtime: 900
 description: Propone construir buenos hábitos y romper los malos a través de pequeños cambios. El libro se ha popularizado como una guía para mejorar la productividad y alcanzar metas a largo plazo. 
 buy:
