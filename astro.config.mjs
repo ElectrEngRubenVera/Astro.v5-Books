@@ -7,5 +7,12 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
-  }
+  },
+
+  env: {
+    schema: {
+      SHOW_BUY_BUTTON: { type: 'boolean', default: true, context: 'server', access: 'public' },
+      SCORE_API_ENDPOINT: { type: 'string', context: 'server', access: 'public' },
+    }
+  },
 });

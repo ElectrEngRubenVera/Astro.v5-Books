@@ -12,10 +12,17 @@ export const prerender = true
 		<h1 class="text-center text-5xl font-extrabold mb-15">Good 🍃
 			<span class="block">Books</span>
 		</h1>
-	</main>
-	<section aria-label="Libros recomdados para el tiempo libre">
 		<div class="px-4 mx-auto max-w-scren-xl">
-			<div class="grid gap-6 md:grid-cols-2">
+			<section aria-label="Sobre mi">
+				<div class="grid grid-cols-3">
+					
+				</div>
+			</section>
+		</div>
+	</main>
+		<section aria-label="Libros recomdados para el tiempo libre">
+			<div class="px-4 mx-auto max-w-scren-xl">
+				<div class="grid gap-6 md:grid-cols-2">
 				{
 					books.map(book => {
 						const {slug,data}=book
@@ -41,7 +48,7 @@ export const prerender = true
 						)
 						
 					})
-				}
+					}
 			</div>
 		</div>
 	</section>
