@@ -2,7 +2,7 @@ import { z as decryptString, B as createSlotValueFromString, C as isAstroCompone
 import { bold, red, yellow, dim, blue } from 'kleur/colors';
 import 'clsx';
 import { serialize, parse } from 'cookie';
-import { g as getActionQueryString, d as deserializeActionResult, D as DEFAULT_404_ROUTE, a as default404Instance, N as NOOP_MIDDLEWARE_FN, e as ensure404Route } from './astro-designed-error-pages_De9f434_.mjs';
+import { g as getActionQueryString, d as deserializeActionResult, D as DEFAULT_404_ROUTE, a as default404Instance, N as NOOP_MIDDLEWARE_FN, e as ensure404Route } from './astro-designed-error-pages_XXUUypqU.mjs';
 import 'es-module-lexer';
 import buffer from 'node:buffer';
 import crypto$1 from 'node:crypto';
