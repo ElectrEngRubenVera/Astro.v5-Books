@@ -15,6 +15,6 @@ export default defineConfig({
       SCORE_API_ENDPOINT: { type: 'string', context: 'server', access: 'public' },
     }
   },
-  output: 'hybrid',
+  output: 'server',
   adapter: vercel(),
 });
