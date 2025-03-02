@@ -1,9 +1,15 @@
 {
-    "version": 2,
     "builds": [
-        {
-        "src": "dist/server/entry.mjs",
+    {
+        "src": "server.js",
         "use": "@vercel/node"
-        }
+    }
+    ],
+    "routes": [
+    {
+        "src": "/(.*)",
+        "dest": "/server.js",
+        "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
+    }
     ]
 }
