@@ -2,9 +2,9 @@
 import { getCollection, render } from "astro:content";
 import { SHOW_BUY_BUTTON } from "astro:env/server";
 import Layout from "../../layouts/Layout.astro"; 
-import AmazonLogo from "../../components/AmazonLogo.astro";
 import BookScore from "../../components/BookScore.astro";
 import BuyButton from "../../components/BuyButton.astro";
+import AboutLogo from "../../components/AboutLogo.astro";
 
 export async function getStaticPaths() {
     const books = await getCollection("books");
@@ -26,7 +26,7 @@ export const prerender = true
 ---
 
 <Layout title={`${title} - Dev Books`}>
-    <div class="flex gap-12">
+    <div class="flex gap-12 mb-30">
         <aside class="flex flex-col items-center gap-4">
             <a href='/' class="hover:underline opacity-70">↩ Volver atrás</a>
             <img transition:name={`img-${slug}`} class="rounded w-72 h-auto" src={`/${img}`} alt={title} />
@@ -44,4 +44,13 @@ export const prerender = true
         </div>
         </main>
     </div>
+	<section>
+		<div class="text-center">
+			<a
+			href="/about"
+			class="text-balance inline-flex gap-2 items-center bg-blue-400 hover:bg-blue-500 active:bg-blue-600 text-black font-bold py-2 px-4 rounded-lg border border-blue-500 transition duration-200 ease-in-out hover:scale-105 justify-center text-center">
+				About Rubén Vera <AboutLogo/>
+			</a>
+		</div>
+	</section>
 </Layout>

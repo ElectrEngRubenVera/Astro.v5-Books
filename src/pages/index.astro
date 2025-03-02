@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
-
+import AboutLogo from '../components/AboutLogo.astro';
 const books = await getCollection('books')
 
 export const prerender = true
@@ -20,7 +20,7 @@ export const prerender = true
 			</section>
 		</div>
 	</main>
-		<section aria-label="Libros recomdados para el tiempo libre">
+		<section class="mb-30" aria-label="Libros recomdados para el tiempo libre">
 			<div class="px-4 mx-auto max-w-scren-xl">
 				<div class="grid gap-6 md:grid-cols-2">
 				{
@@ -50,6 +50,15 @@ export const prerender = true
 					})
 					}
 			</div>
+		</div>
+	</section>
+	<section>
+		<div class="text-center">
+			<a
+			href="/about"
+			class="text-balance inline-flex gap-2 items-center bg-blue-400 hover:bg-blue-500 active:bg-blue-600 text-black font-bold py-2 px-4 rounded-lg border border-blue-500 transition duration-200 ease-in-out hover:scale-105 justify-center text-center">
+				About Rubén Vera <AboutLogo/>
+			</a>
 		</div>
 	</section>
 </Layout>
