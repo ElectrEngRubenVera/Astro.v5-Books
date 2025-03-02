@@ -1,6 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-
+import vercel from '@astrojs/vercel/serverless';
 import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
@@ -16,4 +16,5 @@ export default defineConfig({
       SCORE_API_ENDPOINT: { type: 'string', context: 'server', access: 'public' },
     }
   },
+  adapter: vercel(),
 });
