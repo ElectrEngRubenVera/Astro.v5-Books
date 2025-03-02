@@ -20,7 +20,7 @@ const $$BuyButton = createComponent(($$result, $$props, $$slots) => {
   const countryName = country === SPAIN ? "Espa\xF1ol" : "Ingl\xE9s";
   const { buy } = Astro2.props;
   const url = buy[storeCountry];
-  return renderTemplate`${maybeRenderHead()}<a${addAttribute(url, "href")} title="Comprar libro" target="_blank" rel="noopener noreferrer" class="text-balance inline-flex gap-2 items-center bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 text-black font-bold py-2 px-4 rounded-lg border border-yellow-500 transition duration-200 ease-in-out hover:scale-105 justify-center text-center">
+  return renderTemplate`${maybeRenderHead()}<a${addAttribute(url, "href")} title="Comprar libro" target="_blank" rel="noopener noreferrer" class="text-balance inline-flex gap-2 items-center bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 text-black font-bold py-2 px-4 rounded-lg border border-yellow-500 transition ease-in-out hover:scale-105 justify-center text-center">
 Descargar en ${countryName} ${renderComponent($$result, "AmazonLogo", $$AmazonLogo, {})} </a>`;
 }, "/home/user/paginabasicaastro/src/components/BuyButton.astro", void 0);
 
