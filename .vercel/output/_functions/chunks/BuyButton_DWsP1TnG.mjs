@@ -10,6 +10,7 @@ const $$AmazonLogo = createComponent(($$result, $$props, $$slots) => {
 }, "/home/user/paginabasicaastro/src/components/AmazonLogo.astro", void 0);
 
 const $$Astro = createAstro();
+const prerender = true;
 const $$BuyButton = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$BuyButton;
@@ -26,4 +27,4 @@ Descargar en ${countryName} ${renderComponent($$result, "AmazonLogo", $$AmazonLo
 const $$file = "/home/user/paginabasicaastro/src/components/BuyButton.astro";
 const $$url = undefined;
 
-export { $$BuyButton as default, $$file as file, $$url as url };
+export { $$BuyButton as default, $$file as file, prerender, $$url as url };

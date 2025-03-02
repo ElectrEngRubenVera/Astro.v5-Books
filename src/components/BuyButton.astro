@@ -10,6 +10,7 @@ const countryName = country === SPAIN ? 'Español' : 'Inglés'
 
 const { buy } = Astro.props
 const url = buy[storeCountry]
+export const prerender = true
 ---
 
 <a

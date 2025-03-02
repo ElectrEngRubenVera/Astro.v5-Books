@@ -10,6 +10,7 @@ setOnSetGetEnv(() => {
 });
 const SCORE_API_ENDPOINT = "https://www.random.org/integers/?num=1&min=40&max=50&col=1&base=10&format=plain&rnd=new";
 
+const prerender = true;
 const $$BookScore = createComponent(async ($$result, $$props, $$slots) => {
   const res = await fetch(SCORE_API_ENDPOINT);
   const scoreValue = await res.text();
@@ -21,4 +22,4 @@ const $$BookScore = createComponent(async ($$result, $$props, $$slots) => {
 const $$file = "/home/user/paginabasicaastro/src/components/BookScore.astro";
 const $$url = undefined;
 
-export { $$BookScore as default, $$file as file, $$url as url };
+export { $$BookScore as default, $$file as file, prerender, $$url as url };
