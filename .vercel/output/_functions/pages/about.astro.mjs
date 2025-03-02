@@ -1,7 +1,7 @@
 import { c as createComponent, m as maybeRenderHead, b as renderTemplate, a as createAstro, r as renderComponent, d as addAttribute } from '../chunks/astro/server_xCWX5uDd.mjs';
 import 'kleur/colors';
 import 'clsx';
-import { $ as $$Layout } from '../chunks/Layout_BDQjiynn.mjs';
+import { $ as $$Layout } from '../chunks/Layout_BowfBRaz.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$LinkedinLogo = createComponent(($$result, $$props, $$slots) => {
