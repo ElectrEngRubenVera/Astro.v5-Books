@@ -3,14 +3,19 @@ import AmazonLogo from "./AmazonLogo.astro"
 
 const SPAIN = 'ES'
 
+// Elimina la línea de prerender
+// export const prerender = true
+
+// Verifica si estamos en el lado del cliente o servidor
 const country = Astro.request.headers.get('X-Vercel-IP-Country') ?? 'ES'
 
 const storeCountry = country === SPAIN ? 'spain' : 'usa'
 const countryName = country === SPAIN ? 'Español' : 'Inglés'
 
 const { buy } = Astro.props
-const url = buy[storeCountry]
-export const prerender = true
+
+// Añade validación para asegurarte de que buy[storeCountry] existe
+const url = buy && buy[storeCountry] ? buy[storeCountry] : '#'
 ---
 
 <a
