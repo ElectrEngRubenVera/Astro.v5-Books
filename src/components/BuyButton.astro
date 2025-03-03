@@ -2,50 +2,23 @@
 import AmazonLogo from "./AmazonLogo.astro"
 
 const SPAIN = 'ES'
-// No accedemos a headers durante la compilación
-let country = 'ES'; // Valor por defecto
 
-// Definir el componente como cliente-only
-export const prerender = false;
+const country = Astro.request.headers.get('X-Vercel-IP-Country') ?? 'ES'
+
+const storeCountry = country === SPAIN ? 'spain' : 'usa'
+const countryName = country === SPAIN ? 'España' : 'Estados Unidos'
 
 const { buy } = Astro.props
+const url = buy[storeCountry]
 ---
 
 <a
-  id="buy-button"
-  href="#" 
+  href={url}
   title="Comprar libro"
   target="_blank"
   rel="noopener noreferrer"
-  class="text-balance inline-flex gap-2 items-center bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 text-black font-bold py-2 px-4 rounded-lg border border-yellow-500 transition ease-in-out hover:scale-105 justify-center text-center"
+  class="text-balance inline-flex gap-2 items-center bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 text-black font-bold py-2 px-4 rounded-lg border border-yellow-500 transition duration-200 ease-in-out hover:scale-105 justify-center text-center"
 >
-  Cargando...
+  Comprar en Amazon {countryName}
   <AmazonLogo />
 </a>
-
-<script define:vars={{ buy, SPAIN }}>
-// La detección de país se hace del lado del cliente
-async function getCountry() {
-  try {
-    // Puedes usar un servicio de geolocalización o una API
-    // O para pruebas simplemente:
-    return 'ES'; 
-  } catch (e) {
-    return 'ES'; // Valor por defecto
-  }
-}
-
-getCountry().then(country => {
-  const storeCountry = country === SPAIN ? 'spain' : 'usa';
-  const countryName = country === SPAIN ? 'Español' : 'Inglés';
-  const url = buy && buy[storeCountry] ? buy[storeCountry] : '#';
-  
-  const button = document.getElementById('buy-button');
-  if (button) {
-    button.href = url;
-    button.textContent = `Descargar en ${countryName}`;
-    const amazonLogo = button.querySelector('svg') || document.createElement('div');
-    button.appendChild(amazonLogo);
-  }
-});
-</script>

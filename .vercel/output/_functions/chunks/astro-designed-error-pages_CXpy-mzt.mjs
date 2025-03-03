@@ -1,4 +1,4 @@
-import { N as NOOP_MIDDLEWARE_HEADER, D as DEFAULT_404_COMPONENT } from './astro/server_B_mU_BV-.mjs';
+import { N as NOOP_MIDDLEWARE_HEADER, D as DEFAULT_404_COMPONENT } from './astro/server_h1-_0dWt.mjs';
 import { parse } from 'devalue';
 import { escape } from 'html-escaper';
 
