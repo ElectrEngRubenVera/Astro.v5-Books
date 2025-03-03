@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { defineConfig, envField } from 'astro/config';
-import vercel from '@astrojs/vercel/serverless';
+import deno from '@deno/astro-adapter';
 import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
@@ -16,5 +16,5 @@ export default defineConfig({
     }
   },
   output: 'server',
-  adapter: vercel(),
+  adapter: deno(),
 });

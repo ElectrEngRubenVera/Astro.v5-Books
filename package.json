@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/vercel": "^8.1.0",
+    "@deno/astro-adapter": "^0.2.0",
     "@tailwindcss/vite": "^4.0.9",
     "@vercel/speed-insights": "^1.2.0",
     "astro": "^5.3.1",
