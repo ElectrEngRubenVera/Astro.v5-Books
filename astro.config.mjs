@@ -19,4 +19,9 @@ export default defineConfig({
 
   output: 'server',
   adapter: cloudflare(),
+  image: {
+    service: {
+      entrypoint: "@astrojs/image/compile"
+    }
+  }
 });
